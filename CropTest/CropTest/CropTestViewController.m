@@ -63,8 +63,8 @@
 	// Do any additional setup after loading the view, typically from a nib.
     
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"tactile_noise.png"]];
-    
-    self.imageCropper = [[BJImageCropper alloc] initWithImage:[UIImage imageNamed:@"gavandme.jpg"] andMaxSize:CGSizeMake(1024, 600)];
+    CGRect bounds = [UIScreen mainScreen].bounds;
+    self.imageCropper = [[BJImageCropper alloc] initWithImage:[UIImage imageNamed:@"gavandme.jpg"] andMaxSize:CGSizeMake(bounds.size.width, bounds.size.height)];
     [self.view addSubview:self.imageCropper];
     self.imageCropper.center = self.view.center;
     self.imageCropper.imageView.layer.shadowColor = [[UIColor blackColor] CGColor];
