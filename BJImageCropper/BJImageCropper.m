@@ -208,7 +208,7 @@
 - (CGRect)calcFrameWithImage:(UIImage*)image andMaxSize:(CGSize)maxSize {
     //CGFloat increase = IMAGE_CROPPER_OUTSIDE_STILL_TOUCHABLE * 2;
     
-    //TODO:修改之处
+    //MARK:修改之处
     CGFloat increase = 0;
     
     // if it already fits, return that
