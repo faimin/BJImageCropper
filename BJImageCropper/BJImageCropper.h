@@ -52,7 +52,7 @@
 + (UIView *)initialCropViewForImageView:(UIImageView*)imageView;
 
 - (id)initWithImage:(UIImage*)newImage;
-- (id)initWithImage:(UIImage*)newImage andMaxSize:(CGSize)maxSize;
+- (id)initWithImage:(UIImage*)newImage maxSize:(CGSize)maxSize;
 
 - (UIImage*) getCroppedImage;
 

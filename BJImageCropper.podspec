@@ -8,7 +8,10 @@ Pod::Spec.new do |s|
   s.homepage     = "http://www.barrettj.com"
   s.license      = 'MIT'
   s.author       = { "Barrett Jacobsen" => "admin@barrettj.com" }
-  s.source       = { :git => "https://github.com/barrettj/BJImageCropper.git", :tag => "1.0.2" }
+  s.source       = { 
+    :git => "https://github.com/barrettj/BJImageCropper.git", 
+    :tag => s.version.to_s 
+  }
   s.platform     = :ios, '4.3'
   s.source_files = 'BJImageCropper'
   s.requires_arc = true

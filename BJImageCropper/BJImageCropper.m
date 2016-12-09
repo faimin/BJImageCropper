@@ -257,7 +257,7 @@
     return self;   
 }
 
-- (id)initWithImage:(UIImage*)newImage {
+- (id)initWithImage:(UIImage *)newImage {
     self = [super init];
     if (self) {
         imageScale = 1.0;
@@ -270,7 +270,7 @@
     return self;   
 }
 
-- (id)initWithImage:(UIImage*)newImage andMaxSize:(CGSize)maxSize {
+- (id)initWithImage:(UIImage *)newImage maxSize:(CGSize)maxSize {
     self = [super init];
     if (self) {
         self.frame = [self calcFrameWithImage:newImage andMaxSize:maxSize];
@@ -581,9 +581,8 @@
     return croppedImage;
 }
 
-#ifndef ARC
-
 - (void)dealloc {
+#ifndef ARC
     [imageView release];
     
     [cropView release];
@@ -599,6 +598,7 @@
     [bottomRightView release];
     
     [super dealloc];
-}
 #endif
+}
+
 @end
